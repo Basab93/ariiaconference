@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>ARIIA 2027 Committee</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<style>
+body{font-family:Arial,sans-serif;background:#f8f9fa}
+.navbar{background:#0d6efd!important}
+.hero{background:linear-gradient(rgba(13,110,253,.88),rgba(10,88,202,.88)),url('assets/img/publication-banner.jpg') center/cover no-repeat;color:#fff;padding:110px 0}
+.section-title{font-weight:700;text-transform:uppercase}
+.card{border:none;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.icon{font-size:3rem;color:#0d6efd}
+footer{background:#0d6efd;color:#fff;padding:25px 0;margin-top:60px}
+</style>
+	</head>
+	<body>
+		<script>
+			window.addEventListener('scroll', function () {
+				const navbar = document.getElementById('mainNav');
+				if (window.scrollY > 80) {
+					navbar.classList.add('navbar-scrolled');
+				} else {
+					navbar.classList.remove('navbar-scrolled');
+				}
+			});
+		</script>
+
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+			<div class="container px-4 px-lg-5">
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="ARIIA Conference Home">
+					<img src="images/logo.jpeg" alt="ARIIA" style="height:36px; width:auto;">
+					<span class="fw-semibold d-none d-sm-inline"
+						style="color:#ffffff;font-size:1.35rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.35);">
+						ARIIA 2027
+					</span>
+				</a>
+
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+					aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ms-auto my-2 my-lg-0">
+						<li class="nav-item"><a class="nav-link active" href="index.html#about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
+						<li class="nav-item"><a class="nav-link" href="comittee.html">Committee</a></li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">Program</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="tracks.html">Tracks</a></li>
+								<li><a class="dropdown-item" href="speakers.html">Speakers</a></li>
+								<li><a class="dropdown-item" href="sessions.html">Special Sessions</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">Authors</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="submission.html">Submission</a></li>
+								<li><a class="dropdown-item" href="publication.html">Publication</a></li>
+								<li><a class="dropdown-item" href="register.html">Registration</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">Calls</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="cfp.html">Call for Papers</a></li>
+								<li><a class="dropdown-item" href="session_proposal.html">Call for Special Sessions</a></li>
+								<li><a class="dropdown-item" href="reviewers.html">Call for Reviewers</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">More</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="index.html#portfolio">Gallery 2024</a></li>
+								<li><a class="dropdown-item" href="Sponsorship.html">Sponsorship</a></li>
+								<li><a class="dropdown-item" href="startup.html">Startup Showcase</a></li>
+								<li><a class="dropdown-item" href="index.html#contact">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<section class="hero text-center">
+			<div class="container">
+				<h1>Organizing Committee</h1>
+				<p>The 3rd International Conference on Augmented Reality, Intelligent Systems &amp; Industrial Automation</p>
+				<p>Hung Vuong University • Ho Chi Minh City • Vietnam</p>
+			</div>
+		</section>
+
+		<div class="container py-5">
+			<h2 class="mb-4">Chief Patron</h2>
+			<div class="card p-4 mb-5">
+				<h4>Dr. Tran Viet Anh</h4>
+				<p>Permanent Vice Chairman of the University Council, Acting Vice Chancellor</p>
+				<p>Hung Vuong University of Ho Chi Minh City</p>
+				<p>anhtv@dhv.edu.vn</p>
+			</div>
+
+			<h2 class="mb-4">Conference Leadership</h2>
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">General Conference Chair</div>
+						<h5>Dr. Tran Viet Anh</h5>
+						<p>Permanent Vice Chairman of the University Council, Acting Vice Chancellor</p>
+						<p>Hung Vuong University</p>
+						<p><i class="bi bi-envelope"></i> anhtv@dhv.edu.vn</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">General Conference Co-Chair</div>
+						<h5>Prof. Dr. Sc. Nguyen Dinh Duc</h5>
+						<p>Honorary Rector</p>
+						<p>Institute of Advanced Technology and Artificial Intelligence</p>
+						<p><i class="bi bi-envelope"></i> ducnd@dhv.edu.vn</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">Publication Chair</div>
+						<h5>Dr. Dang Thi Thao Ly</h5>
+						<p>Vice Rector</p>
+						<p>Institute for Educational Partnerships and Distance Learning</p>
+						<p><i class="bi bi-envelope"></i> lydtt@dhv.edu.vn</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">Technical Program Chair</div>
+						<h5>Dr. Nguyen Van Dung</h5>
+						<p>Dean</p>
+						<p>Faculty of Engineering and Technology</p>
+						<p><i class="bi bi-envelope"></i> dungnv@dhv.edu.vn</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">Finance Chair</div>
+						<h5>Mr. Tran Ngoc Han</h5>
+						<p>Head</p>
+						<p>Office of Finance and Accounting</p>
+						<p><i class="bi bi-envelope"></i> hantn@dhv.edu.vn</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">Publicity Chair</div>
+						<h5>Ms. Nguyen Hai Truong An, M.A.</h5>
+						<p>Director</p>
+						<p>Center for Communication and Admissions Development</p>
+						<p><i class="bi bi-envelope"></i> annht@dhv.edu.vn</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">Local Organization Chair</div>
+						<h5>Mr. Nguyen Van Hien, M.A.</h5>
+						<p>Chief of Office</p>
+						<p>DHV Office</p>
+						<p><i class="bi bi-envelope"></i> hiennv@dhv.edu.vn</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-lg-4">
+					<div class="card p-4 h-100">
+						<div class="text-primary fw-bold">Information Contact Chair</div>
+						<h5>Ms. Ngo Thi Lan Chi, M.A.</h5>
+						<p>Deputy Head</p>
+						<p>DHV Global Office</p>
+						<p><i class="bi bi-envelope"></i> chintl@dhv.edu.vn</p>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="mt-5 mb-4">Local Organization Committee</h2>
+			<div class="table-responsive">
+				<table class="table table-bordered table-hover">
+					<thead class="table-primary">
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Organization</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Assoc. Prof. Dr. Tran Van Hung</td>
+							<td>Vice Chancellor</td>
+							<td>Hung Vuong University</td>
+							<td>tranvanhung@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Dr. Nguyen Thi My Dung</td>
+							<td>Vice Chancellor</td>
+							<td>Hung Vuong University</td>
+							<td>dungntm.3@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Dr. Pham Ngoc Minh</td>
+							<td>Head, Office of Research Management</td>
+							<td>Hung Vuong University</td>
+							<td>minhpn@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Dr. Nguyen Van Tam</td>
+							<td>Vice Director</td>
+							<td>Institute of Advanced Technology and AI</td>
+							<td>tamnv@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Mr. Dinh Van Dat, M.A.</td>
+							<td>Vice Director</td>
+							<td>Institute of Advanced Technology and AI</td>
+							<td>datdv@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Dr. Duong Thi Thu Van</td>
+							<td>Vice Dean</td>
+							<td>Faculty of Engineering and Technology</td>
+							<td>vandtt@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Dr. Nguyen Lan Anh</td>
+							<td>Director</td>
+							<td>Institute of Corporate Culture</td>
+							<td>anhnl@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Dr. Tran Thi Dien</td>
+							<td>Dean</td>
+							<td>Faculty of Finance, Banking and Accounting</td>
+							<td>dientt@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Dr. Nguyen Quang Hieu</td>
+							<td>Dean</td>
+							<td>Faculty of Foreign Languages</td>
+							<td>hieunq@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Assoc. Prof. Dr. Le Phan Thi Dieu Thao</td>
+							<td>Lecturer</td>
+							<td>Faculty of Finance, Banking and Accounting</td>
+							<td>thaolptd@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Mr. Luong Thanh Trung, M.A.</td>
+							<td>Director</td>
+							<td>Center for Technology</td>
+							<td>luongthanhtrung@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Ms. Pham Vo Thao Lien, M.A.</td>
+							<td>Head</td>
+							<td>Office of Student Affairs and Social Relations</td>
+							<td>lienpvt@dhv.edu.vn</td>
+						</tr>
+						<tr>
+							<td>Mr. Ly Long, M.A.</td>
+							<td>Head</td>
+							<td>Office of Testing and Quality Assurance</td>
+							<td>longly@dhv.edu.vn</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container text-center">© ARIIA 2027</div>
+		</footer>
+	</body>
+</html>
