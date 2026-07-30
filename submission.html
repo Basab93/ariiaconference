@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Paper Submission | ARIIA 2027</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+
+            background:
+                linear-gradient(rgba(18, 46, 88, .92), rgba(48, 73, 117, .92)),
+                url('assets/img/publication-banner.jpg') center/cover no-repeat;
+
+            color: #fff;
+
+            padding: 140px 0 90px;
+
+            margin-top: 78px;
+
+            text-align: center;
+
+        }
+
+        .hero h1 {
+            font-weight: 700;
+        }
+
+        .hero p {
+
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, .92);
+
+        }
+
+        /* ---------- Section ---------- */
+
+        .section-title {
+
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #0d2b57;
+
+        }
+
+        .divider {
+
+            width: 70px;
+            height: 4px;
+            background: #F4C430;
+            margin: auto;
+            border-radius: 10px;
+            margin-bottom: 30px;
+
+        }
+
+        /* ===========================
+   NAVBAR
+=========================== */
+
+        #mainNav {
+            transition: all .3s ease;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .12);
+            z-index: 1050;
+        }
+
+        #mainNav .navbar-brand span {
+            color: #0d6efd !important;
+            text-shadow: none !important;
+        }
+
+        #mainNav .navbar-nav .nav-link {
+            color: #212529 !important;
+            font-size: .95rem;
+            font-weight: 600;
+            padding: .5rem .75rem;
+            transition: .3s;
+        }
+
+        #mainNav .navbar-nav .nav-link:hover {
+            color: #F4C430 !important;
+        }
+
+        /* Active page */
+
+        #mainNav .nav-link.active,
+        #mainNav .dropdown-item.active {
+            color: #0d6efd !important;
+            font-weight: 700;
+            background: transparent;
+        }
+
+        /* ===========================
+   DROPDOWN
+=========================== */
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+            padding: .6rem 0;
+            min-width: 220px;
+        }
+
+        .dropdown-item {
+            padding: .65rem 1.25rem;
+            transition: .2s;
+        }
+
+        .dropdown-item:hover {
+            background: #f8f9fa;
+            color: #0d6efd;
+        }
+
+        /* Hover dropdown on desktop */
+
+        @media (min-width:992px) {
+
+            .navbar .dropdown:hover>.dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+
+            .navbar .dropdown-toggle::after {
+                transition: .2s;
+            }
+
+            .navbar .dropdown:hover .dropdown-toggle::after {
+                transform: rotate(180deg);
+            }
+
+        }
+
+        /* ===========================
+   MOBILE
+=========================== */
+
+        @media (max-width:991.98px) {
+
+            #navbarResponsive {
+
+                background: #ffffff;
+                margin-top: 15px;
+                padding: 15px;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+
+            }
+
+            #navbarResponsive .nav-link {
+
+                color: #212529 !important;
+                padding: 12px 0;
+
+            }
+
+            #navbarResponsive .dropdown-menu {
+
+                position: static;
+                float: none;
+                border: none;
+                box-shadow: none;
+                background: #f8f9fa;
+                margin-left: 12px;
+                border-radius: 8px;
+
+            }
+
+            #navbarResponsive .dropdown-item {
+
+                padding: 10px 15px;
+
+            }
+
+            .navbar-toggler {
+
+                border: none;
+                box-shadow: none;
+
+            }
+
+        }
+
+        /* ==========================
+   FOOTER
+========================== */
+
+        .footer-custom {
+
+            background: #0d2b57;
+
+            color: #ffffff;
+
+            padding: 50px 0;
+
+            margin-top: 80px;
+
+        }
+
+        .footer-custom h5 {
+
+            font-weight: 700;
+            margin-bottom: 20px;
+
+        }
+
+        .footer-custom p {
+
+            color: rgba(255, 255, 255, .75);
+            margin-bottom: 10px;
+
+        }
+
+        .footer-custom a {
+
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+
+        .footer-custom a:hover {
+
+            color: #F4C430;
+
+        }
+
+        .footer-custom i {
+
+            color: #F4C430;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===================================== -->
+    <!-- USE YOUR EXISTING NAVBAR HERE -->
+    <!-- ===================================== -->
+
+    <!-- ================= Navigation ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+
+        <div class="container px-4 px-lg-5">
+
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"
+                aria-label="ARIIA Conference Home">
+
+                <img src="images/logo.jpeg" alt="ARIIA Logo" style="height:36px;width:auto;">
+
+                <span class="fw-semibold d-none d-sm-inline"
+                    style="color:#ffffff;font-size:1.35rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.35);">
+                    ARIIA 2027
+                </span>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#venue">Venue</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="committee.html">Committee</a>
+                    </li>
+
+                    <!-- Program -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="programDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            Program
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="tracks.html">
+                                    Tracks
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="speakers.html">
+                                    Speakers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="sessions.html">
+                                    Special Sessions
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- Authors -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle active" href="#" id="authorsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            Authors
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item active" href="submission.html">
+                                    Submission
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="publication.html">
+                                    Publication
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="register.html">
+                                    Registration
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- Calls -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="callsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            Calls
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="cfp.html">
+                                    Call for Papers
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="session_proposal.html">
+                                    Call for Special Sessions
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="reviewers.html">
+                                    Call for Reviewers
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- More -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            More
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="index.html#portfolio">
+                                    Gallery 2024
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="sponsorship.html">
+                                    Sponsorship
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="startup.html">
+                                    Startup Showcase
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="index.html#contact">
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>Paper Submission</h1>
+
+            <p class="mt-3">
+
+                Submit your original research contributions to ARIIA 2027.
+
+            </p>
+
+            <p>
+
+                3rd International Conference on Augmented Reality,
+                Intelligent Systems & Industrial Automation
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- OVERVIEW -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">
+
+                    Overview
+
+                </h2>
+
+                <div class="divider"></div>
+
+                <p class="lead">
+
+                    Academicians, researchers, scientists, industry professionals, and practitioners are invited to
+                    submit original, unpublished research papers that are not currently under review by any other
+                    conference or journal.
+
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-3">
+
+                    <div class="info-card text-center">
+
+                        <i class="bi bi-file-earmark-text-fill"></i>
+
+                        <h5>Original Articles</h5>
+
+                        <p class="text-muted">
+
+                            Only original and unpublished manuscripts are accepted.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="info-card text-center">
+
+                        <i class="bi bi-person-check-fill"></i>
+
+                        <h5>Peer Review</h5>
+
+                        <p class="text-muted">
+
+                            All submissions undergo rigorous double-blind peer review.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="info-card text-center">
+
+                        <i class="bi bi-award-fill"></i>
+
+                        <h5>Quality First</h5>
+
+                        <p class="text-muted">
+
+                            Evaluation based on originality, quality and technical contribution.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="info-card text-center">
+
+                        <i class="bi bi-person-video3"></i>
+
+                        <h5>Presentation</h5>
+
+                        <p class="text-muted">
+
+                            At least one author must register and present the accepted paper.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="highlight mt-5">
+
+                <h4>
+
+                    Similarity Policy
+
+                </h4>
+
+                <p>
+
+                    All submitted manuscripts will be screened for both textual similarity and AI-generated content.
+
+                </p>
+
+                <ul>
+
+                    <li>Maximum Turnitin Similarity Index: <strong>15%</strong></li>
+
+                    <li>Maximum AI-generated Content: <strong>20%</strong></li>
+
+                    <li>Papers exceeding either threshold will be rejected without review.</li>
+
+                    <li>Authors must disclose AI assistance where applicable.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= QUICK FACTS ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">Quick Facts</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="info-card text-center">
+                    <i class="bi bi-file-earmark-text-fill fs-1 text-primary mb-3"></i>
+                    <h5>Maximum Paper Length</h5>
+                    <p class="mb-0">Maximum 5 pages including references.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="info-card text-center">
+                    <i class="bi bi-journal-code fs-1 text-primary mb-3"></i>
+                    <h5>Formatting</h5>
+                    <p class="mb-0">Use the official IEEE Conference Template.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="info-card text-center">
+                    <i class="bi bi-shield-check fs-1 text-primary mb-3"></i>
+                    <h5>Similarity</h5>
+                    <p class="mb-0">≤15% Turnitin Similarity.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="info-card text-center">
+                    <i class="bi bi-robot fs-1 text-primary mb-3"></i>
+                    <h5>AI Generated Content</h5>
+                    <p class="mb-0">≤20% AI similarity report required.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="info-card text-center">
+                    <i class="bi bi-folder2-open fs-1 text-primary mb-3"></i>
+                    <h5>Submission Files</h5>
+                    <p class="mb-0">Upload Paper, Turnitin Report and AI Report separately.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="info-card text-center">
+                    <i class="bi bi-file-earmark-code fs-1 text-primary mb-3"></i>
+                    <h5>Supported Formats</h5>
+                    <p class="mb-0">MS Word (.docx) or LaTeX (PDF generated).</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= BUTTONS ================= -->
+
+<section class="py-4">
+
+    <div class="container text-center">
+
+        <a href="#"
+           class="btn btn-primary btn-lg rounded-pill px-5 me-3">
+            <i class="bi bi-download me-2"></i>
+            Download Template
+        </a>
+
+        <a href="#"
+           class="btn btn-danger btn-lg rounded-pill px-5">
+            <i class="bi bi-upload me-2"></i>
+            Submit via CMT
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= BEST PAPER ================= -->
+
+<section class="pb-5">
+
+    <div class="container">
+
+        <div class="alert alert-success rounded-4 shadow-sm p-4">
+
+            <h4 class="mb-3">
+                <i class="bi bi-trophy-fill me-2"></i>
+                Best Paper Awards
+            </h4>
+
+            <p class="mb-0">
+                Outstanding research contributions will be recognized through
+                <strong>Best Paper Awards</strong>.
+                One paper from each technical session will be selected based on
+                reviewer scores, presentation quality and research impact.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer-custom">
+
+    <div class="container py-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h4 class="fw-bold mb-3">
+                    ARIIA 2027
+                </h4>
+
+                <p>
+                    The 3rd IEEE International Conference on
+                    Augmented Reality, Intelligent Systems &
+                    Industrial Automation
+                </p>
+
+                <p class="mb-0">
+                    Hosted by Hung Vuong University<br>
+                    Ho Chi Minh City, Vietnam
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
+
+                <p class="mb-2">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    chair@ariiaconference.com
+                </p>
+
+                <p class="mb-0">
+                    © 2027 ARIIA Conference. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

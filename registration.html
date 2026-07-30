@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Registration | ARIIIA 2027</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f8f9fc;
+            color: #333;
+        }
+
+        /*=========================
+            NAVBAR
+        =========================*/
+
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, .06);
+        }
+
+        .navbar-brand img {
+            height: 52px;
+            border-radius: 8px;
+        }
+
+        .navbar-brand h5 {
+            color: #122E58;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .navbar-brand small {
+            color: #D4AF37;
+            font-weight: 600;
+        }
+
+        .navbar-nav .nav-link {
+            color: #122E58;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link:hover {
+            color: #0d6efd;
+        }
+
+        /*=========================
+            HERO
+        =========================*/
+
+        .page-header {
+
+            margin-top: 76px;
+
+            padding: 90px 0;
+
+            color: white;
+
+            background:
+                linear-gradient(rgba(18,46,88,.92),
+                rgba(48,73,117,.92)),
+                url("assets/img/header-bg.jpg") center/cover;
+        }
+
+        .page-header h1 {
+
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .breadcrumb-custom {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 8px 18px;
+
+            background: rgba(255,255,255,.12);
+
+            border-radius: 30px;
+        }
+
+        .breadcrumb-custom a{
+
+            color:white;
+            text-decoration:none;
+        }
+
+        /*=========================
+            SECTIONS
+        =========================*/
+
+        section{
+
+            padding:70px 0;
+        }
+
+        .section-title{
+
+            color:#122E58;
+
+            font-weight:700;
+
+            font-size:2rem;
+        }
+
+        .divider{
+
+            width:80px;
+
+            height:4px;
+
+            background:#0d6efd;
+
+            margin:14px auto 35px;
+
+            border-radius:10px;
+        }
+
+        /*=========================
+            INFO CARD
+        =========================*/
+
+        .info-card{
+
+            background:white;
+
+            border-radius:18px;
+
+            padding:35px;
+
+            box-shadow:0 8px 25px rgba(0,0,0,.06);
+        }
+
+        /*=========================
+            REGISTRATION TABLE
+        =========================*/
+
+        .fee-table{
+
+            background:white;
+
+            border-radius:18px;
+
+            overflow:hidden;
+
+            box-shadow:0 8px 25px rgba(0,0,0,.06);
+        }
+
+        .fee-table table{
+
+            margin:0;
+        }
+
+        .fee-table thead{
+
+            background:#122E58;
+
+            color:white;
+        }
+
+        .fee-table th{
+
+            text-align:center;
+
+            vertical-align:middle;
+
+            padding:18px;
+        }
+
+        .fee-table td{
+
+            text-align:center;
+
+            vertical-align:middle;
+
+            padding:18px;
+        }
+
+        .highlight{
+
+            background:#fff8df;
+
+            font-weight:700;
+
+            color:#0d6efd;
+        }
+
+        .price{
+
+            font-size:1.25rem;
+
+            font-weight:700;
+        }
+
+        .early{
+
+            color:#198754;
+        }
+
+        .normal{
+
+            color:#0d6efd;
+        }
+
+        .late{
+
+            color:#dc3545;
+        }
+
+        .note-box{
+
+            margin-top:25px;
+
+            background:#eef6ff;
+
+            border-left:5px solid #0d6efd;
+
+            border-radius:10px;
+
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+
+            .page-header h1{
+
+                font-size:2rem;
+            }
+
+        }
+
+        
+/* ==========================
+   FOOTER
+========================== */
+
+ .footer-custom {
+
+            background: #0d2b57;
+
+            color: #ffffff;
+
+            padding: 50px 0;
+
+            margin-top: 80px;
+
+        }
+
+        .footer-custom h5 {
+
+            font-weight: 700;
+            margin-bottom: 20px;
+
+        }
+
+        .footer-custom p {
+
+            color: rgba(255, 255, 255, .75);
+            margin-bottom: 10px;
+
+        }
+
+        .footer-custom a {
+
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+
+        .footer-custom a:hover {
+
+            color: #F4C430;
+
+        }
+
+        .footer-custom i {
+
+            color: #F4C430;
+        }
+
+
+        
+#mainNav{
+
+    background:#ffffff !important;
+    box-shadow:0 3px 15px rgba(0,0,0,.10);
+    padding:14px 0;
+    transition:.3s;
+    z-index:1050;
+
+}
+
+#mainNav .navbar-brand span{
+
+    color:#0d6efd !important;
+    text-shadow:none !important;
+    font-weight:700;
+
+}
+
+#mainNav .navbar-nav .nav-link{
+
+    color:#212529 !important;
+    font-size:.95rem;
+    font-weight:600;
+    padding:.6rem .85rem;
+    transition:.25s;
+
+}
+
+#mainNav .navbar-nav .nav-link:hover{
+
+    color:#0d6efd !important;
+
+}
+
+#mainNav .navbar-nav .nav-link.active{
+
+    color:#0d6efd !important;
+
+}
+        /* ==========================
+   DROPDOWN
+========================== */
+
+.dropdown-menu{
+
+    border:none;
+    border-radius:12px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    padding:.5rem 0;
+    min-width:220px;
+
+}
+
+.dropdown-item{
+
+    padding:10px 18px;
+    transition:.2s;
+
+}
+
+.dropdown-item:hover{
+
+    background:#f5f7fa;
+    color:#0d6efd;
+
+}
+
+.dropdown-item.active{
+
+    background:#e9f2ff;
+    color:#0d6efd;
+    font-weight:600;
+
+}
+
+/* Desktop Hover */
+
+@media (min-width:992px){
+
+    .navbar .dropdown:hover>.dropdown-menu{
+
+        display:block;
+        margin-top:0;
+
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:991.98px){
+
+    #navbarResponsive{
+
+        background:#fff;
+        margin-top:15px;
+        padding:15px;
+        border-radius:12px;
+        box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    }
+
+    #navbarResponsive .nav-link{
+
+        color:#212529 !important;
+        padding:12px 0;
+
+    }
+
+    #navbarResponsive .dropdown-menu{
+
+        position:static;
+        float:none;
+        border:none;
+        background:#f8f9fa;
+        box-shadow:none;
+        margin-left:12px;
+        border-radius:8px;
+
+    }
+
+    .navbar-toggler{
+
+        border:none;
+        box-shadow:none;
+
+    }
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!--=========================
+    NAVBAR
+==========================-->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+			<div class="container px-4 px-lg-5">
+				<a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="ARIIA Conference Home">
+					<img src="images/logo.jpeg" alt="ARIIA" style="height:36px; width:auto;">
+					<span class="fw-semibold "
+						style="color:#ffffff;font-size:1.35rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.35);">
+						ARIIA 2027
+					</span>
+				</a>
+
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+					aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ms-auto my-2 my-lg-0">
+						<li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html#venue">Venue</a></li>
+						<li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">Program</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="tracks.html">Tracks</a></li>
+								<li><a class="dropdown-item" href="speakers.html">Speakers</a></li>
+								<li><a class="dropdown-item" href="sessions.html">Special Sessions</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">Authors</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="submission.html">Submission</a></li>
+								<li><a class="dropdown-item" href="publication.html">Publication</a></li>
+								<li><a class="dropdown-item active" href="registration.html">Registration</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="callsDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false">
+        Calls
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="callsDropdown">
+
+        <li>
+            <a class="dropdown-item" href="cfp.html">
+                Call for Papers
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="session_proposal.html">
+                Call for Special Sessions
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="reviewers.html">
+                Call for Reviewers
+            </a>
+        </li>
+
+    </ul>
+
+</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#">More</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="index.html#portfolio">Gallery 2024</a></li>
+								<li><a class="dropdown-item" href="Sponsorship.html">Sponsorship</a></li>
+								<li><a class="dropdown-item" href="startup.html">Startup Showcase</a></li>
+								<li><a class="dropdown-item" href="index.html#contact">Contact</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+<!--=========================
+    HERO
+==========================-->
+
+<header class="page-header text-center">
+
+<div class="container">
+
+<h1>Conference Registration</h1>
+
+<p class="lead mt-3">
+
+Registration fees, payment information, and important registration policies.
+
+</p>
+
+<div class="breadcrumb-custom">
+
+<a href="index.html">Home</a>
+
+/
+
+<span>Registration</span>
+
+</div>
+
+</div>
+
+</header>
+
+<!--=========================
+    OVERVIEW
+==========================-->
+
+<section>
+
+<div class="container">
+
+<div class="text-center">
+
+<h2 class="section-title">
+
+Registration Information
+
+</h2>
+
+<div class="divider"></div>
+
+</div>
+
+<div class="info-card">
+
+<p>
+
+Authors of accepted papers are required to complete registration before the registration deadline. Each accepted paper must have at least one registered author to be included in the conference program and proceedings.
+
+</p>
+
+<p class="mb-0">
+
+Participants who wish to attend the conference without presenting a paper are welcome to register under the <strong>Observer Registration</strong> category.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!--=========================
+    REGISTRATION FEES
+==========================-->
+
+<section class="pt-0">
+
+<div class="container">
+
+<div class="text-center">
+
+<h2 class="section-title">
+
+Registration Fees
+
+</h2>
+
+<div class="divider"></div>
+
+</div>
+
+<div class="fee-table table-responsive">
+
+<table class="table table-bordered align-middle">
+
+<thead>
+
+<tr>
+
+<th rowspan="2">Registration Category</th>
+
+<th colspan="1">Early Bird<br><small>Until 31 Aug 2026</small></th>
+
+<th colspan="1">Normal<br><small>1 Sep – 31 Oct 2026</small></th>
+
+<th colspan="1">Late<br><small>From 1 Nov 2026</small></th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td class="fw-bold">
+
+Author Registration
+
+</td>
+
+<td class="highlight">
+
+<div class="price early">$300</div>
+
+</td>
+
+<td>
+
+<div class="price normal">$350</div>
+
+</td>
+
+<td>
+
+<div class="price late">$400</div>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td class="fw-bold">
+
+Observer Registration
+
+</td>
+
+<td class="highlight">
+
+<div class="price early">$50</div>
+
+</td>
+
+<td>
+
+<div class="price normal">$100</div>
+
+</td>
+
+<td>
+
+<div class="price late">$150</div>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="note-box">
+
+<i class="bi bi-info-circle-fill text-primary me-2"></i>
+
+<strong>Note:</strong>
+
+Registration fees include conference participation, access to technical sessions, conference materials, refreshments, and a participation certificate. Author registration additionally includes publication of one accepted paper in the conference proceedings.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!--=========================
+    WHAT'S INCLUDED
+==========================-->
+
+<section>
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <h2 class="section-title">
+                What's Included
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Author -->
+
+            <div class="col-lg-6">
+
+                <div class="info-card h-100">
+
+                    <div class="d-flex align-items-center mb-3">
+
+                        <i class="bi bi-person-workspace fs-2 text-primary me-3"></i>
+
+                        <h4 class="mb-0">Author Registration</h4>
+
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Conference participation
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Paper presentation slot
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Conference proceedings
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Conference kit
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Certificate of Presentation
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Tea breaks & Lunch
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Observer -->
+
+            <div class="col-lg-6">
+
+                <div class="info-card h-100">
+
+                    <div class="d-flex align-items-center mb-3">
+
+                        <i class="bi bi-people-fill fs-2 text-primary me-3"></i>
+
+                        <h4 class="mb-0">Observer Registration</h4>
+
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Access to all technical sessions
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Conference kit
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Participation Certificate
+                        </li>
+
+                        <li class="list-group-item">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            Tea breaks & Lunch
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================
+    PAYMENT INFORMATION
+==========================-->
+
+<section class="pt-0">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <h2 class="section-title">
+                Payment Information
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+        <div class="info-card">
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <h5 class="text-primary mb-3">
+
+                        <i class="bi bi-credit-card me-2"></i>
+
+                        Accepted Payment Methods
+
+                    </h5>
+
+                    <ul>
+
+                        <li>Bank Transfer</li>
+
+                        <li>Credit / Debit Card</li>
+
+                        <li>Online Payment Gateway</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <h5 class="text-primary mb-3">
+
+                        <i class="bi bi-bank me-2"></i>
+
+                        Payment Details
+
+                    </h5>
+
+                    <p class="mb-0">
+
+                        Detailed payment instructions will be shared with authors
+                        after paper acceptance and during the registration process.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================
+    REGISTRATION POLICY
+==========================-->
+
+<section class="pt-0">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <h2 class="section-title">
+                Registration Policy
+            </h2>
+
+            <div class="divider"></div>
+
+        </div>
+
+        <div class="accordion" id="policyAccordion">
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#policy1">
+
+                        Registration Policy
+
+                    </button>
+
+                </h2>
+
+                <div id="policy1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#policyAccordion">
+
+                    <div class="accordion-body">
+
+                        <ul>
+
+                            <li>Each accepted paper must have at least one registered author.</li>
+
+                            <li>Only registered papers will be included in the conference proceedings.</li>
+
+                            <li>Registration is personal and non-transferable.</li>
+
+                            <li>Additional papers may require an additional publication fee.</li>
+
+                            <li>Student registrations may require a valid student ID.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#policy2">
+
+                        Cancellation & Refund Policy
+
+                    </button>
+
+                </h2>
+
+                <div id="policy2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#policyAccordion">
+
+                    <div class="accordion-body">
+
+                        Registration fees are generally non-refundable.
+                        Any exceptional refund requests will be reviewed by
+                        the Organizing Committee and handled on a case-by-case basis.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================
+    CALL TO ACTION
+==========================-->
+
+<section class="pb-5">
+
+    <div class="container">
+
+        <div class="cta text-center">
+
+            <h2 class="mb-3">
+                Ready to Register?
+            </h2>
+
+            <p class="lead mb-4">
+
+                Complete your registration after your paper has been accepted
+                and secure your participation in ARIIIA 2027.
+
+            </p>
+
+            <a href="#" class="btn btn-gold btn-lg me-3">
+
+                <i class="bi bi-pencil-square me-2"></i>
+
+                Register Now
+
+            </a>
+
+            <a href="contact.html"
+                class="btn btn-outline-light btn-lg">
+
+                <i class="bi bi-envelope me-2"></i>
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================
+    FOOTER
+==========================-->
+		
+<!-- Footer-->
+<footer class="footer-custom">
+
+    <div class="container py-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h4 class="fw-bold mb-3">
+                    ARIIA 2027
+                </h4>
+
+                <p>
+                    The 3rd IEEE International Conference on
+                    Augmented Reality, Intelligent Systems &
+                    Industrial Automation
+                </p>
+
+                <p class="mb-0">
+                    Hosted by Hung Vuong University<br>
+                    Ho Chi Minh City, Vietnam
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
+
+                <p class="mb-2">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    chair@ariiaconference.com
+                </p>
+
+                <p class="mb-0">
+                    © 2027 ARIIA Conference. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

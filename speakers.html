@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Speakers | ARIIA 2027</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+
+        body{
+            background:#f8f9fa;
+        }
+
+        .hero{
+            background:linear-gradient(rgba(13,43,87,.88),rgba(13,43,87,.88)),
+            url('assets/img/publication-banner.jpg') center/cover;
+            color:#fff;
+            padding:140px 0 90px;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-weight:700;
+        }
+
+        .section-title{
+            font-weight:700;
+            color:#0d2b57;
+            margin-bottom:15px;
+        }
+
+        .speaker-card{
+            background:#fff;
+            border:none;
+            border-radius:18px;
+            padding:45px 30px;
+            box-shadow:0 10px 25px rgba(0,0,0,.08);
+            transition:.3s;
+            text-align:center;
+        }
+
+        .speaker-card:hover{
+            transform:translateY(-6px);
+        }
+
+        .speaker-icon{
+            font-size:70px;
+            color:#0d6efd;
+            margin-bottom:20px;
+        }
+
+       
+/* ==========================
+   NAVBAR
+========================== */
+
+#mainNav{
+
+    background:#ffffff !important;
+    box-shadow:0 3px 15px rgba(0,0,0,.10);
+    padding:14px 0;
+    transition:.3s;
+    z-index:1050;
+
+}
+
+#mainNav .navbar-brand span{
+
+    color:#0d6efd !important;
+    text-shadow:none !important;
+    font-weight:700;
+
+}
+
+#mainNav .navbar-nav .nav-link{
+
+    color:#212529 !important;
+    font-size:.95rem;
+    font-weight:600;
+    padding:.6rem .85rem;
+    transition:.25s;
+
+}
+
+#mainNav .navbar-nav .nav-link:hover{
+
+    color:#0d6efd !important;
+
+}
+
+#mainNav .navbar-nav .nav-link.active{
+
+    color:#0d6efd !important;
+
+}
+
+/* ==========================
+   DROPDOWN
+========================== */
+
+.dropdown-menu{
+
+    border:none;
+    border-radius:12px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    padding:.5rem 0;
+    min-width:220px;
+
+}
+
+.dropdown-item{
+
+    padding:10px 18px;
+    transition:.2s;
+
+}
+
+.dropdown-item:hover{
+
+    background:#f5f7fa;
+    color:#0d6efd;
+
+}
+
+.dropdown-item.active{
+
+    background:#e9f2ff;
+    color:#0d6efd;
+    font-weight:600;
+
+}
+
+/* Desktop Hover */
+
+@media (min-width:992px){
+
+    .navbar .dropdown:hover>.dropdown-menu{
+
+        display:block;
+        margin-top:0;
+
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:991.98px){
+
+    #navbarResponsive{
+
+        background:#fff;
+        margin-top:15px;
+        padding:15px;
+        border-radius:12px;
+        box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    }
+
+    #navbarResponsive .nav-link{
+
+        color:#212529 !important;
+        padding:12px 0;
+
+    }
+
+    #navbarResponsive .dropdown-menu{
+
+        position:static;
+        float:none;
+        border:none;
+        background:#f8f9fa;
+        box-shadow:none;
+        margin-left:12px;
+        border-radius:8px;
+
+    }
+
+    .navbar-toggler{
+
+        border:none;
+        box-shadow:none;
+
+    }
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    background:
+    linear-gradient(rgba(18,46,88,.92),rgba(48,73,117,.92)),
+    url('assets/img/publication-banner.jpg') center/cover no-repeat;
+
+    color:#fff;
+
+    padding:130px 0 80px;
+
+    margin-top:10px;
+
+    text-align:center;
+
+}
+
+.hero h1{
+            font-weight:700;
+        }
+
+.hero p{
+
+    font-size:1.25rem;
+    color:rgba(255,255,255,.92);
+
+}
+
+/* ==========================
+   TITLES
+========================== */
+
+.section-title{
+
+    font-weight:700;
+    text-transform:uppercase;
+
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card{
+
+    border:none;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.icon{
+
+    font-size:3rem;
+    color:#0d6efd;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+ .footer-custom {
+
+            background: #0d2b57;
+
+            color: #ffffff;
+
+            padding: 50px 0;
+
+            margin-top: 80px;
+
+        }
+
+        .footer-custom h5 {
+
+            font-weight: 700;
+            margin-bottom: 20px;
+
+        }
+
+        .footer-custom p {
+
+            color: rgba(255, 255, 255, .75);
+            margin-bottom: 10px;
+
+        }
+
+        .footer-custom a {
+
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+
+        .footer-custom a:hover {
+
+            color: #F4C430;
+
+        }
+
+        .footer-custom i {
+
+            color: #F4C430;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ================= Navbar ================= -->
+<!-- ================= Navigation ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+
+    <div class="container px-4 px-lg-5">
+
+        <a class="navbar-brand d-flex align-items-center gap-2"
+           href="index.html"
+           aria-label="ARIIA Conference Home">
+
+            <img src="images/logo.jpeg"
+                 alt="ARIIA Logo"
+                 style="height:36px;width:auto;">
+
+            <span class="fw-semibold d-none d-sm-inline"
+                  style="color:#ffffff;font-size:1.35rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.35);">
+                ARIIA 2027
+            </span>
+
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#venue">Venue</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="committee.html">Committee</a>
+                </li>
+
+                <!-- Program -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="programDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Program
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="tracks.html">Tracks</a></li>
+
+                        <li><a class="dropdown-item active" href="speakers.html">Speakers</a></li>
+
+                        <li><a class="dropdown-item" href="sessions.html">Special Sessions</a></li>
+
+                    </ul>
+
+                </li>
+
+                <!-- Authors -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="authorsDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Authors
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="submission.html">Submission</a></li>
+
+                        <li><a class="dropdown-item" href="publication.html">Publication</a></li>
+
+                        <li><a class="dropdown-item" href="register.html">Registration</a></li>
+
+                    </ul>
+
+                </li>
+
+                <!-- Calls -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="callsDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        Calls
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="cfp.html">Call for Papers</a></li>
+
+                        <li><a class="dropdown-item" href="session_proposal.html">Call for Special Sessions</a></li>
+
+                        <li><a class="dropdown-item" href="reviewers.html">Call for Reviewers</a></li>
+
+                    </ul>
+
+                </li>
+
+                <!-- More -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="moreDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        More
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item" href="index.html#portfolio">Gallery 2024</a></li>
+
+                        <li><a class="dropdown-item" href="sponsorship.html">Sponsorship</a></li>
+
+                        <li><a class="dropdown-item" href="startup.html">Startup Showcase</a></li>
+
+                        <li><a class="dropdown-item" href="index.html#contact">Contact</a></li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ================= Hero ================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>Conference Speakers</h1>
+
+        <p class="lead mt-3">
+            ARIIA 2027 will feature internationally renowned keynote and invited speakers from academia and industry.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= Keynote ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Keynote Speakers
+            </h2>
+
+            <p class="text-muted">
+                Distinguished keynote speakers will be announced soon.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6">
+
+                <div class="speaker-card">
+
+                    <i class="bi bi-mic-fill speaker-icon"></i>
+
+                    <h4 class="fw-bold">
+                        Speaker Details Coming Soon
+                    </h4>
+
+                    <p class="text-muted mt-3">
+                        The Organizing Committee is in the process of confirming internationally renowned keynote speakers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= Invited Speakers ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Invited Speakers
+            </h2>
+
+            <p class="text-muted">
+                Information will be updated shortly.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6">
+
+                <div class="speaker-card">
+
+                    <i class="bi bi-person-video3 speaker-icon"></i>
+
+                    <h4 class="fw-bold">
+                        Updates Coming Soon
+                    </h4>
+
+                    <p class="text-muted mt-3">
+                        Stay tuned for announcements regarding invited speakers representing leading universities, research organizations, and industry.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= Footer ================= -->
+
+		
+<!-- Footer-->
+<footer class="footer-custom">
+
+    <div class="container py-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h4 class="fw-bold mb-3">
+                    ARIIA 2027
+                </h4>
+
+                <p>
+                    The 3rd IEEE International Conference on
+                    Augmented Reality, Intelligent Systems &
+                    Industrial Automation
+                </p>
+
+                <p class="mb-0">
+                    Hosted by Hung Vuong University<br>
+                    Ho Chi Minh City, Vietnam
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
+
+                <p class="mb-2">
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    chair@ariiaconference.com
+                </p>
+
+                <p class="mb-0">
+                    © 2027 ARIIA Conference. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+window.addEventListener('scroll', function () {
+
+    const navbar = document.getElementById('mainNav');
+
+    if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

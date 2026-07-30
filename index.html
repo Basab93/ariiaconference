@@ -21,6 +21,23 @@
         <link href="css/styles.css" rel="stylesheet" />
 
 <style>
+#mainNav{
+    background:#fff !important;
+    border-bottom:1px solid #e9ecef;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+#mainNav .navbar-nav .nav-link{
+    color:#212529 !important;
+    font-weight:600;
+}
+
+#mainNav .navbar-nav .nav-link:hover{
+    color:#F4C430 !important;
+}
+    .overview-section{
+    background:
+    linear-gradient(rgba(18,46,88,.92), rgba(48,73,117,.92));
+}
 /* Mobile Navbar */
 @media (max-width: 991.98px) {
 
@@ -143,43 +160,102 @@
 .dropdown-menu a:hover {
   background-color: #f5f5f5;
 }
+
+ .footer-custom {
+
+            background: #0d2b57;
+
+            color: #ffffff;
+
+            padding: 50px 0;
+
+            margin-top: 80px;
+
+        }
+
+        .footer-custom h5 {
+
+            font-weight: 700;
+            margin-bottom: 20px;
+
+        }
+
+        .footer-custom p {
+
+            color: rgba(255, 255, 255, .75);
+            margin-bottom: 10px;
+
+        }
+
+        .footer-custom a {
+
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+
+        .footer-custom a:hover {
+
+            color: #F4C430;
+
+        }
+
+        .footer-custom i {
+
+            color: #F4C430;
+        }
+
+
+        #tracks .card{
+    transition:all .3s ease;
+    border-radius:18px;
+}
+
+#tracks .card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12)!important;
+}
+
+#tracks .btn{
+    font-weight:600;
+}
 </style>
 
 
     </head>
 
-
-
-    <script>
-
-
-
-window.addEventListener('scroll', function () {
-				const navbar = document.getElementById('mainNav');
-				if (window.scrollY > 80) {
-					navbar.classList.add('navbar-scrolled');
-				} else {
-					navbar.classList.remove('navbar-scrolled');
-				}
-			});
-
-</script>
     <body id="page-top">
         <!-- Navigation-->
-       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+       <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-3" id="mainNav">
   <div class="container px-4 px-lg-5">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="ARIIA Conference Home">
-      <img src="images/logo.jpeg" alt="ARIIA" style="height:36px; width:auto;">
-      <span class="fw-semibold"
-style="
-color:#ffffff;
-font-size:1.35rem;
-font-weight:700;
-text-shadow:0 2px 8px rgba(107, 10, 10, 0.913);
-">
-ARIIA 2027
-</span>
-    </a>
+    <a class="navbar-brand d-flex align-items-center gap-3"
+   href="index.html"
+   aria-label="ARIIA Conference Home">
+
+    <img src="images/logo.jpeg"
+         alt="ARIIA Logo"
+         style="height:46px;width:auto;
+                border-radius:8px;
+                background:#fff;
+                padding:3px;
+                box-shadow:0 3px 10px rgba(0,0,0,.25);">
+
+   <div class="d-flex flex-column lh-1">
+
+    <span class="fw-bold fs-4" style="color:#122E58;">
+        ARIIA 2027
+    </span>
+
+    <!-- <small style="
+        color:#F4C430;
+        letter-spacing:2px;
+        font-weight:700;">
+        International Conference
+    </small> -->
+
+</div>
+
+</a>
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
       aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -247,7 +323,7 @@ ARIIA 2027
   </div>
 </nav>
 
-        <!-- Masthead-->
+    
 <!-- Masthead-->
 <header class="masthead text-center text-white d-flex align-items-center"
 style="
@@ -257,14 +333,14 @@ url('images/hero.png') center center/cover no-repeat;
 background-size:cover;
 background-position:center;
 min-height:100vh;
-padding-top:90px;
+padding-top:120px;
 
 ">
 
 <div class="container px-4 px-lg-5">
 
 <h5 style="color:#F4C430;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:15px;">
-3<sup>rd</sup> IEEE International Conference On
+3<sup>rd</sup> International Conference On
 </h5>
 
 <h1 class="fw-bold display-5 mb-3">
@@ -276,7 +352,7 @@ Augmented Reality, Intelligent Systems &amp; Industrial Automation
 </h2>
 
 <p class="lead mb-3">
-Hosted by <strong>Hung Vuong University</strong><br>
+Venue: <strong>Hung Vuong University</strong><br>
 Ho Chi Minh City, Vietnam
 </p>
 
@@ -284,8 +360,9 @@ Ho Chi Minh City, Vietnam
 Bringing together researchers, academicians, industry professionals and innovators to advance research in Artificial Intelligence, Augmented Reality, Intelligent Systems and Industrial Automation.
 </p>
 
-<p class="small text-white-75 mb-4">
-Conference Dates will be announced soon
+<p class="small mb-4" style="color:#F4C430;font-weight:600;">
+    <i class="bi bi-calendar-event me-2"></i>
+    17–19 June 2027
 </p>
 
 <div class="mt-5 mb-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
@@ -307,10 +384,10 @@ Conference Dates will be announced soon
 </div>
 </header>
 
-<section class="page-section bg-primary text-white" id="about"
-
-style="padding-top:120px;">
-  <div class="container px-4 px-lg-5">
+<section class="page-section overview-section text-white" id="about"
+    style="padding-top:120px;">
+<div class="container-fluid px-4 px-lg-5">
+    <div style="max-width:1600px;margin:auto;">
     <div class="row gx-5 align-items-start">
       
       <!-- LEFT : Conference Overview -->
@@ -489,31 +566,55 @@ style="padding-top:120px;">
 <div class="col-lg-5">
 
     <!-- Important Dates -->
-    <div class="bg-white text-dark p-4 rounded-3 shadow-sm">
+<div class="bg-white text-dark p-4 rounded-3 shadow-sm">
 
-        <h4 class="fw-bold text-center text-uppercase text-primary mb-4">
-            Important Dates
-        </h4>
+      <h5 class="fw-bold mb-3 text-center text-uppercase text-primary">
+          Important Dates
+          </h5>
 
-        <div class="text-center py-5">
+    <div class="divider mx-auto mb-5"></div>
 
-            <i class="bi bi-calendar-event"
-               style="font-size:60px;color:#0d6efd;"></i>
+    <div class="row text-center g-4">
 
-            <h3 class="mt-4 fw-bold text-primary">
-                Coming Soon
-            </h3>
+        <div class="col-md-4">
+            <i class="bi bi-file-earmark-arrow-up fs-1 text-primary"></i>
 
-            <p class="text-muted mb-0"
-               style="font-size:17px; line-height:1.7;">
-                The conference schedule, paper submission deadlines,
-                acceptance notifications, registration dates, and
-                camera-ready submission timeline will be announced shortly.
+            <h5 class="fw-bold mt-3 mb-2">
+                15 March<br>2027
+            </h5>
+
+            <p class="mb-0 fs-6">
+                <strong>Paper Submission Deadline</strong>
             </p>
+        </div>
 
+        <div class="col-md-4">
+            <i class="bi bi-check-circle fs-1 text-success"></i>
+
+            <h5 class="fw-bold mt-3 mb-2">
+                15 April<br>2027
+            </h5>
+
+            <p class="mb-0 fs-6">
+                <strong>Acceptance Notification</strong>
+            </p>
+        </div>
+
+        <div class="col-md-4">
+            <i class="bi bi-upload fs-1 text-danger"></i>
+
+            <h5 class="fw-bold mt-3 mb-2">
+                15 May<br>2027
+            </h5>
+
+            <p class="mb-0 fs-6">
+                <strong>Camera-Ready Paper Submission</strong>
+            </p>
         </div>
 
     </div>
+
+</div>
 
         <!-- Key Highlights -->
         <div class="bg-white text-dark p-4 rounded-3 shadow-sm mt-4">
@@ -536,7 +637,7 @@ style="padding-top:120px;">
 
             <li class="mb-2">
     <i class="bi bi-camera-video text-primary me-2"></i>
-    <strong>Conference Mode:</strong> ARIIA 2027 is planned to be conducted primarily in <strong>offline mode</strong> at Hung Vuong University, Ho Chi Minh City, Vietnam. Information regarding hybrid or virtual participation will be announced in due course.
+    <strong>Conference Mode:</strong> ARIIA 2027 is planned to be conducted primarily in <strong>Hybrid mode</strong> at Hung Vuong University, Ho Chi Minh City, Vietnam. Information regarding hybrid or virtual participation will be announced in due course.
 </li>
           </ul>
         </div>
@@ -735,6 +836,237 @@ style="padding-top:80px;">
   </div>
 </section>
 
+
+<!-- ================= TRACKS ================= -->
+
+<section class="page-section bg-white" id="tracks"  style="padding-top:100px;">
+
+    <div class="container px-4 px-lg-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold text-uppercase">
+                Conference Tracks
+            </h2>
+
+            <hr class="divider mb-4">
+
+            <p class="text-muted mx-auto" style="max-width:850px;">
+                ARIIA 2027 invites original research papers under the following
+                thematic tracks. Explore the future of intelligent systems,
+                automation, artificial intelligence, and emerging technologies.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Track 1 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <i class="bi bi-robot fs-1 text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Track 1
+                        </h5>
+
+                        <h6 class="text-primary fw-semibold mb-3">
+                            Robotics & Industrial Automation
+                        </h6>
+
+                        <p class="text-muted">
+                            Automation, robotics, and human–machine integration
+                            in next-generation manufacturing.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+
+                        <a href="tracks.html"
+                           class="btn btn-outline-primary rounded-pill">
+                            View Details
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Track 2 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <i class="bi bi-cpu fs-1 text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Track 2
+                        </h5>
+
+                        <h6 class="text-primary fw-semibold mb-3">
+                            Industry 4.0 & Industry 5.0
+                        </h6>
+
+                        <p class="text-muted">
+                            Digital transformation, cyber–physical systems,
+                            smart factories and sustainable manufacturing.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+
+                        <a href="tracks.html"
+                           class="btn btn-outline-primary rounded-pill">
+                            View Details
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Track 3 -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <i class="bi bi-heart-pulse fs-1 text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Track 3
+                        </h5>
+
+                        <h6 class="text-primary fw-semibold mb-3">
+                            Bioengineering & Medical Technologies
+                        </h6>
+
+                        <p class="text-muted">
+                            Biomedical devices, wearable technologies and
+                            engineering innovations for healthcare.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+
+                        <a href="tracks.html"
+                           class="btn btn-outline-primary rounded-pill">
+                            View Details
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Track 4 -->
+            <div class="col-md-6 col-lg-6">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <i class="bi bi-brain fs-1 text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Track 4
+                        </h5>
+
+                        <h6 class="text-primary fw-semibold mb-3">
+                            Artificial Intelligence & Machine Learning
+                        </h6>
+
+                        <p class="text-muted">
+                            Deep learning, natural language processing,
+                            computer vision and emerging AI applications.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+
+                        <a href="tracks.html"
+                           class="btn btn-outline-primary rounded-pill">
+                            View Details
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Track 5 -->
+            <div class="col-md-6 col-lg-6">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <i class="bi bi-broadcast fs-1 text-primary"></i>
+                        </div>
+
+                        <h5 class="fw-bold">
+                            Track 5
+                        </h5>
+
+                        <h6 class="text-primary fw-semibold mb-3">
+                            Communication & Networking
+                        </h6>
+
+                        <p class="text-muted">
+                            IoT, 5G and beyond, wireless communication,
+                            blockchain and network security.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer bg-white border-0">
+
+                        <a href="tracks.html"
+                           class="btn btn-outline-primary rounded-pill">
+                            View Details
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 <!-- Contact -->
 <section class="page-section bg-light" id="contact" style="padding-top:100px;">
 
@@ -789,7 +1121,8 @@ style="padding-top:80px;">
 
                     <p class="mb-0">
                         <i class="bi bi-globe me-3"></i>
-                        www.ariia.in
+                        www.ariiaconference.com
+        
                     </p>
 
                 </div>
@@ -797,139 +1130,51 @@ style="padding-top:80px;">
             </div>
 
             <!-- Right Panel -->
-            <div class="col-lg-7">
+           
+<div class="col-lg-7">
 
-                <div class="text-center mb-4">
-                    <span class="badge bg-primary px-4 py-2 fs-6">
-                        Organizing Committee Contacts
-                    </span>
-                </div>
+    <div class="text-center mb-4">
+        <span class="badge bg-primary px-4 py-2 fs-6">
+            Conference Contact
+        </span>
+    </div>
 
-                <div class="row g-4">
+    <div class="row justify-content-center">
 
-                    <!-- Contact 1 -->
-                    <div class="col-md-6">
+        <div class="col-lg-8 col-md-10">
 
-                        <div class="border rounded-4 p-4 shadow-sm h-100">
+            <div class="border rounded-4 p-4 shadow-sm h-100 text-center">
 
-                            <h5 class="fw-bold">
-                                Dr. Princy Randhawa
-                            </h5>
+                <h4 class="fw-bold mb-2">
+                    Dr. Princy Randhawa
+                </h4>
 
-                            <p class="text-muted mb-3">
-                                Conference Chair
-                            </p>
+                <p class="text-muted mb-4">
+                    Conference Chair
+                </p>
 
-                            <p class="mb-2">
-                                <i class="bi bi-envelope text-primary me-2"></i>
-                                <a href="mailto:princy-aiml@dsu.edu.in"
-                                   class="text-decoration-none text-dark">
-                                    princy-aiml@dsu.edu.in
-                                </a>
-                            </p>
+                <p class="mb-3">
+                    <i class="bi bi-envelope-fill text-primary me-2"></i>
 
-                            <p class="mb-0">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                +91-9521099223
-                            </p>
+                    <a href="mailto:princy-aiml@dsu.edu.in"
+                       class="text-decoration-none text-dark">
+                        princy-aiml@dsu.edu.in
+                    </a>
+                </p>
 
-                        </div>
+                <p class="mb-0">
+                    <i class="bi bi-telephone-fill text-primary me-2"></i>
 
-                    </div>
-
-                    <!-- Contact 2 -->
-                    <div class="col-md-6">
-
-                        <div class="border rounded-4 p-4 shadow-sm h-100">
-
-                            <h5 class="fw-bold">
-                                Dr. Jitendra Jaiswal
-                            </h5>
-
-                            <p class="text-muted mb-3">
-                                Organizing Secretary
-                            </p>
-
-                            <p class="mb-2">
-                                <i class="bi bi-envelope text-primary me-2"></i>
-                                <a href="mailto:jitendrajaiswal-aiml@dsu.edu.in"
-                                   class="text-decoration-none text-dark">
-                                    jitendrajaiswal-aiml@dsu.edu.in
-                                </a>
-                            </p>
-
-                            <p class="mb-0">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                +91-8148670315
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Contact 3 -->
-                    <div class="col-md-6">
-
-                        <div class="border rounded-4 p-4 shadow-sm h-100">
-
-                            <h5 class="fw-bold">
-                                Prof. Nithesh Naik
-                            </h5>
-
-                            <p class="text-muted mb-3">
-                                Technical Committee
-                            </p>
-
-                            <p class="mb-2">
-                                <i class="bi bi-envelope text-primary me-2"></i>
-                                <a href="mailto:nithesh.naik@manipal.edu"
-                                   class="text-decoration-none text-dark">
-                                    nithesh.naik@manipal.edu
-                                </a>
-                            </p>
-
-                            <p class="mb-0">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                +91-8310874339
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Contact 4 -->
-                    <div class="col-md-6">
-
-                        <div class="border rounded-4 p-4 shadow-sm h-100">
-
-                            <h5 class="fw-bold">
-                                Dr. Krishna Kant Pandey
-                            </h5>
-
-                            <p class="text-muted mb-3">
-                                Publication Chair
-                            </p>
-
-                            <p class="mb-2">
-                                <i class="bi bi-envelope text-primary me-2"></i>
-                                <a href="mailto:krishna.pandey@jaipur.manipal.edu"
-                                   class="text-decoration-none text-dark">
-                                    krishna.pandey@jaipur.manipal.edu
-                                </a>
-                            </p>
-
-                            <p class="mb-0">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                +91-9798946481
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                    +91-9521099223
+                </p>
 
             </div>
+
+        </div>
+
+    </div>
+
+</div>
 
         </div>
 
@@ -938,7 +1183,7 @@ style="padding-top:80px;">
 </section>
 
 <!-- Footer-->
-<footer class="bg-dark text-white py-5 mt-5">
+<footer class="footer-custom py-5">
 
     <div class="container px-4 px-lg-5">
 
